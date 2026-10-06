@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent is Easy by Stanley - Premium Prado Rentals in Edo State</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="logo-box" onclick="switchTab('home')">
+                <i class="fa-solid fa-crown logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-title">RENT IS EASY</span>
+                    <span class="brand-sub">BY STANLEY • EDO STATE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" id="nav-home" onclick="switchTab('home')">Home</a>
+                <a href="#about" class="nav-link" id="nav-about" onclick="switchTab('about')">About Us</a>
+                <a href="#fleet" class="nav-link" id="nav-fleet" onclick="switchTab('fleet')">Fleet & Rates</a>
+                <a href="#gallery" class="nav-link" id="nav-gallery" onclick="switchTab('gallery')">Gallery</a>
+                <a href="#contact" class="nav-link" id="nav-contact" onclick="switchTab('contact')">Contact</a>
+            </nav>
+
+            <!-- Quick Action Call Button -->
+            <div class="header-right">
+                <a href="tel:08108802910" class="btn btn-gold btn-header">
+                    <i class="fa-solid fa-phone"></i> 08108802910
+                </a>
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="mobile-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE CONTENT CONTAINER ==================== -->
+    <main class="main-content">
+
+        <!-- ==================== 1. HOME PAGE ==================== -->
+        <section id="page-home" class="tab-page active">
+
+            <!-- Hero Section with Animated Driving Prado -->
+            <div class="hero-section">
+                <!-- Interactive Driving Scene Canvas/DOM Container -->
+                <div class="driving-stage" id="drivingStage">
+                    <div class="parallax-bg"></div>
+                    <div class="road-container">
+                        <div class="road-surface"></div>
+                        <div class="road-line"></div>
+                    </div>
+
+                    <!-- Driving Prado Vehicle Structure -->
+                    <div class="prado-vehicle" id="pradoCar">
+                        <div class="exhaust-smoke"></div>
+                        <div class="headlight-beam"></div>
+                        <div class="vehicle-body">
+                            <div class="cabin-roof"></div>
+                            <div class="window-glass front-win"></div>
+                            <div class="window-glass rear-win"></div>
+                            <div class="door-panel">
+                                <div class="handle"></div>
+                                <div class="gold-accent-line"></div>
+                                <div class="branding-badge">STANLEY PRADO</div>
+                            </div>
+                            <div class="front-grille"></div>
+                            <div class="front-headlight"></div>
+                            <div class="tail-light"></div>
+                        </div>
+                        <div class="wheel wheel-front">
+                            <div class="rim-spokes"></div>
+                        </div>
+                        <div class="wheel wheel-rear">
+                            <div class="rim-spokes"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Text Overlay -->
+                <div class="hero-overlay-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-shield-halved"></i> EDO STATE'S #1 LUXURY PRADO FLEET
+                    </div>
+                    <h1 class="hero-title">Experience Unmatched Comfort & Distinction in Benin City</h1>
+                    <p class="hero-subtitle">
+                        Travel across Edo State and beyond with our pristine Toyota Prado SUVs. Handled by well-dressed suit-and-tie chauffeurs with complimentary drinks & high-speed Wi-Fi onboard.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#fleet" class="btn btn-gold btn-lg" onclick="switchTab('fleet')">
+                            <i class="fa-solid fa-car"></i> Reserve Your Prado
+                        </a>
+                        <a href="tel:08108802910" class="btn btn-outline btn-lg">
+                            <i class="fa-solid fa-phone-flip"></i> Call Us Directly
+                        </a>
+                        <button class="btn btn-dark btn-lg" id="driveToggleBtn" onclick="toggleDriveAnimation()">
+                            <i class="fa-solid fa-pause"></i> <span id="driveBtnText">Pause Drive</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <i class="fa-solid fa-user-tie stat-icon"></i>
+                    <div>
+                        <div class="stat-number">Suit & Tie</div>
+                        <div class="stat-label">Well-Dressed Chauffeurs</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-wifi stat-icon"></i>
+                    <div>
+                        <div class="stat-number">Free Wi-Fi</div>
+                        <div class="stat-label">High-Speed Onboard Internet</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-wine-glass stat-icon"></i>
+                    <div>
+                        <div class="stat-number">Complimentary</div>
+                        <div class="stat-label">Chilled Drinks & Snacks</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-map-location-dot stat-icon"></i>
+                    <div>
+                        <div class="stat-number">Edo State</div>
+                        <div class="stat-label">Airport & Regional Coverage</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- "Why Choose Us" Section -->
+            <section class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-tag">EXCELLENCE IN MOTION</span>
+                    <h2 class="section-heading">Why Choose "Rent is Easy by Stanley"?</h2>
+                    <p class="section-subtext">We don't just rent cars; we deliver a first-class VIP transportation experience engineered to solve every road mobility challenge in Edo State.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>Dapper Suit-and-Tie Chauffeurs</h3>
+                        <p>Our drivers are professional, highly trained, courteous, and always sharply dressed in formal suit-and-tie attire for a prestigious arrival.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h3>Free Onboard Wi-Fi & Power</h3>
+                        <p>Stay connected and productive during every journey with complimentary high-speed Wi-Fi and mobile device charging ports in all Prado models.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-bottle-water"></i></div>
+                        <h3>Chilled Refreshments</h3>
+                        <p>Every ride includes complimentary cold bottled water, premium fruit juices, and light snacks to ensure maximum comfort.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Exclusive Prado Only Fleet</h3>
+                        <p>We specialize exclusively in Toyota Prado SUVs, ensuring every single vehicle is meticulously serviced, ultra-clean, and climate-controlled.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+                        <h3>Punctual Airport Pickups</h3>
+                        <p>Seamless airport transfers to and from Benin City Airport (BNI) with flight tracking so you never wait a second on the tarmac.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <h3>Safety & Protection</h3>
+                        <p>Our drivers possess extensive local road knowledge in Edo State, combined with GPS tracking for secure and peaceful travel.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Prado Pricing Preview -->
+            <section class="section-container bg-dark-card">
+                <div class="section-header text-center">
+                    <span class="section-tag">TRANSPARENT NAIRA PRICING</span>
+                    <h2 class="section-heading">Our Executive Prado Models</h2>
+                    <p class="section-subtext">All rates are clearly priced in Nigerian Naira (₦) with zero hidden fees. Fuel & chauffeur included based on package.</p>
+                </div>
+
+                <div class="fleet-grid">
+                    <!-- Prado Card 1 -->
+                    <div class="car-card">
+                        <div class="car-image-box">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado TX Luxury" class="car-img">
+                            <div class="car-badge">Most Popular</div>
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">Toyota Prado TX-L (Executive)</h3>
+                            <div class="car-specs">
+                                <span><i class="fa-solid fa-user"></i> 7 Seats</span>
+                                <span><i class="fa-solid fa-snowflake"></i> Dual AC</span>
+                                <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fa-solid fa-user-tie"></i> Suit Chauffeur</span>
+                            </div>
+                            <div class="car-price-box">
+                                <span class="price-amount">₦150,000</span>
+                                <span class="price-period">/ Per Day (Within Benin City)</span>
+                            </div>
+                            <div class="car-perks">
+                                <i class="fa-solid fa-circle-check"></i> Free Refreshments + Wi-Fi Included
+                            </div>
+                            <button class="btn btn-gold btn-full" onclick="openBookingModal('Toyota Prado TX-L (Executive)', '₦150,000')">
+                                Book This Prado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Prado Card 2 -->
+                    <div class="car-card">
+                        <div class="car-image-box">
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado VX V6 VIP" class="car-img">
+                            <div class="car-badge">VIP Edition</div>
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">Toyota Prado VX V6 (VIP Gold)</h3>
+                            <div class="car-specs">
+                                <span><i class="fa-solid fa-user"></i> 7 Seats</span>
+                                <span><i class="fa-solid fa-shield"></i> Armored Option</span>
+                                <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fa-solid fa-user-tie"></i> Suit Chauffeur</span>
+                            </div>
+                            <div class="car-price-box">
+                                <span class="price-amount">₦220,000</span>
+                                <span class="price-period">/ Per Day (Inter-State Available)</span>
+                            </div>
+                            <div class="car-perks">
+                                <i class="fa-solid fa-circle-check"></i> Premium Refreshments + VIP Security
+                            </div>
+                            <button class="btn btn-gold btn-full" onclick="openBookingModal('Toyota Prado VX V6 (VIP Gold)', '₦220,000')">
+                                Book This Prado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center margin-top-lg">
+                    <a href="#fleet" class="btn btn-outline" onclick="switchTab('fleet')">View Full Fleet & Packages <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-tag">CLIENT REVIEWS</span>
+                    <h2 class="section-heading">What Our Valued Clients Say</h2>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"Stanley provided 3 Prado SUVs for my wedding in Benin City. The cars were spotless, and the drivers wore sharp black suits with ties. The free Wi-Fi kept our bridal team online all day. Top notch service!"</p>
+                        <div class="reviewer-info">
+                            <strong>Chief Osaigbovo E.</strong>
+                            <span>Wedding Client, Benin City</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"Whenever I fly into Benin Airport for corporate meetings, Stanley is my go-to. The chauffeur waits with a sign, the car is ice cold with chilled juices, and I can work on my laptop with the onboard Wi-Fi."</p>
+                        <div class="reviewer-info">
+                            <strong>Engr. Tunde A.</strong>
+                            <span>Corporate Executive, Lagos/Edo</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"Rent is Easy by Stanley lives up to its name. Honest Naira pricing with no hidden charges. The Prado was smooth for our family trip to Ekpoma. 10/10 recommendation!"</p>
+                        <div class="reviewer-info">
+                            <strong>Dr. Mrs. Osarumen K.</strong>
+                            <span>Family Traveler</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==================== 2. ABOUT US PAGE ==================== -->
+        <section id="page-about" class="tab-page">
+            <div class="about-hero">
+                <span class="section-tag">WHO WE ARE</span>
+                <h1 class="page-title">Solving Transportation Challenges in Edo State</h1>
+                <p class="page-intro">
+                    "Rent is Easy by Stanley" was established with a singular mission: to eliminate stress, unreliability, and lack of comfort in regional car rentals across Edo State and the Niger Delta region.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <h2>Our Story & Vision</h2>
+                        <p>
+                            Navigating business trips, high-profile weddings, or family getaways in Edo State often presents unique logistics hurdles—unmaintained vehicles, unprofessional drivers, or hidden fee structures.
+                        </p>
+                        <p>
+                            Founded by Stanley, a passionate automotive and logistics specialist, our agency was built to deliver uncompromising luxury and peace of mind. We chose to specialize exclusively in the <strong>Toyota Prado SUV</strong> because of its legendary durability on Nigerian roads, combined with premium executive interior comfort.
+                        </p>
+                        <p>
+                            Whether you need an airport pickup at Benin Airport, full-day chauffeur services for VIP dignitaries, or escort-ready Prado convoys, we ensure every detail is handled with perfection.
+                        </p>
+                    </div>
+                    <div class="about-image-box">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Luxury Prado Fleet" class="about-img">
+                    </div>
+                </div>
+
+                <!-- Core Promises Section -->
+                <div class="margin-top-xl">
+                    <div class="section-header text-center">
+                        <span class="section-tag">UNWAVERING QUALITY</span>
+                        <h2 class="section-heading">Our Core Promises</h2>
+                    </div>
+
+                    <div class="promises-grid">
+                        <div class="promise-card">
+                            <div class="promise-num">01</div>
+                            <div class="promise-icon"><i class="fa-solid fa-clock"></i></div>
+                            <h3>Guaranteed Punctuality</h3>
+                            <p>We arrive 15 minutes before your scheduled pickup time. Zero delays, every single time.</p>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-num">02</div>
+                            <div class="promise-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            <h3>Well-Dressed Chauffeurs</h3>
+                            <p>All drivers are dressed in crisp, formal suit-and-tie attire, exhibiting utmost politeness and professionalism.</p>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-num">03</div>
+                            <div class="promise-icon"><i class="fa-solid fa-wifi"></i></div>
+                            <h3>Onboard Amenities</h3>
+                            <p>Free high-speed Wi-Fi internet and chilled bottled beverages supplied in every Prado vehicle.</p>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-num">04</div>
+                            <div class="promise-icon"><i class="fa-solid fa-naira-sign"></i></div>
+                            <h3>Transparent Naira Pricing</h3>
+                            <p>All rental rates are clearly published in Nigerian Naira (₦). What you see is exactly what you pay.</p>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-num">05</div>
+                            <div class="promise-icon"><i class="fa-solid fa-broom"></i></div>
+                            <h3>Pristine Cleanliness</h3>
+                            <p>Vehicles undergo complete interior vacuuming, sanitization, and exterior detailing prior to every client handover.</p>
+                        </div>
+                        <div class="promise-card">
+                            <div class="promise-num">06</div>
+                            <div class="promise-icon"><i class="fa-solid fa-headset"></i></div>
+                            <h3>24/7 Dedicated Support</h3>
+                            <p>Direct line access to Stanley and our dispatch control room throughout your active rental duration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. FLEET & SERVICES PAGE ==================== -->
+        <section id="page-fleet" class="tab-page">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-tag">LUXURY FLEET & RATES</span>
+                    <h1 class="page-title">Toyota Prado Models & Specialized Services</h1>
+                    <p class="section-subtext">Choose your preferred Prado package. All rates are listed in Nigerian Naira (₦) for transparent booking.</p>
+                </div>
+
+                <!-- Specialized Services Grid -->
+                <h2 class="sub-heading margin-top-lg"><i class="fa-solid fa-concierge-bell icon-gold"></i> Our Tailored Mobility Services</h2>
+                <div class="services-list-grid">
+                    <div class="service-box">
+                        <i class="fa-solid fa-plane-arrival service-icon"></i>
+                        <h4>Airport Pickups & Drop-offs</h4>
+                        <p>Stress-free airport transfers to Benin City Airport (BNI). Flight tracking and suit-dressed chauffeur welcome.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-rings-wedding service-icon"></i>
+                        <h4>Wedding Transportation</h4>
+                        <p>Make your special day memorable with decorated Toyota Prado bridal escorts and convoy arrangements.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-briefcase service-icon"></i>
+                        <h4>Business & Executive Trips</h4>
+                        <p>Equipped with onboard Wi-Fi so executives can work seamlessly en route to corporate meetings in Edo State.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-compass service-icon"></i>
+                        <h4>Weekend Getaways</h4>
+                        <p>Travel in comfort to tourist sights like Okomu National Park, Somorika Hills, or family homecomings.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-camera service-icon"></i>
+                        <h4>Photoshoots & Video Productions</h4>
+                        <p>Sleek, scratch-free Prado vehicles available for music videos, movie shoots, and brand campaigns.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="fa-solid fa-user-shield service-icon"></i>
+                        <h4>Full Chauffeur Services</h4>
+                        <p>Dedicated personal driver for full-day city runs with complete privacy and local road navigation expertise.</p>
+                    </div>
+                </div>
+
+                <!-- Full Pricing Cards -->
+                <h2 class="sub-heading margin-top-xl"><i class="fa-solid fa-tags icon-gold"></i> Prado Rental Pricing Breakdown</h2>
+                <div class="fleet-grid">
+                    <!-- Pricing Card 1 -->
+                    <div class="car-card">
+                        <div class="car-image-box">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado TX-L" class="car-img">
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">Toyota Prado TX-L Standard</h3>
+                            <div class="car-specs">
+                                <span><i class="fa-solid fa-user"></i> 7 Seats</span>
+                                <span><i class="fa-solid fa-gas-pump"></i> Gasoline/Diesel</span>
+                                <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                            </div>
+                            <div class="car-price-box">
+                                <span class="price-amount">₦150,000</span>
+                                <span class="price-period">/ Daily (12 Hours)</span>
+                            </div>
+                            <ul class="perk-list">
+                                <li><i class="fa-solid fa-check"></i> Well-dressed suit & tie chauffeur</li>
+                                <li><i class="fa-solid fa-check"></i> Free chilled drinks & water</li>
+                                <li><i class="fa-solid fa-check"></i> Free high-speed Wi-Fi</li>
+                                <li><i class="fa-solid fa-check"></i> Within Benin City Metropolis</li>
+                            </ul>
+                            <button class="btn btn-gold btn-full" onclick="openBookingModal('Toyota Prado TX-L Standard', '₦150,000')">
+                                Reserve Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 2 -->
+                    <div class="car-card">
+                        <div class="car-image-box">
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado VX V6" class="car-img">
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">Toyota Prado VX V6 Luxury</h3>
+                            <div class="car-specs">
+                                <span><i class="fa-solid fa-user"></i> 7 Seats</span>
+                                <span><i class="fa-solid fa-bolt"></i> V6 Engine</span>
+                                <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                            </div>
+                            <div class="car-price-box">
+                                <span class="price-amount">₦200,000</span>
+                                <span class="price-period">/ Daily (Full 24 Hours)</span>
+                            </div>
+                            <ul class="perk-list">
+                                <li><i class="fa-solid fa-check"></i> Well-dressed suit & tie chauffeur</li>
+                                <li><i class="fa-solid fa-check"></i> Executive refreshment basket</li>
+                                <li><i class="fa-solid fa-check"></i> Free high-speed Wi-Fi</li>
+                                <li><i class="fa-solid fa-check"></i> Inter-state coverage available</li>
+                            </ul>
+                            <button class="btn btn-gold btn-full" onclick="openBookingModal('Toyota Prado VX V6 Luxury', '₦200,000')">
+                                Reserve Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 3 -->
+                    <div class="car-card">
+                        <div class="car-image-box">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Toyota Prado Executive Escort" class="car-img">
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">Prado Executive Convoy Package</h3>
+                            <div class="car-specs">
+                                <span><i class="fa-solid fa-car-side"></i> 2+ Prado SUVs</span>
+                                <span><i class="fa-solid fa-shield"></i> VIP Escort</span>
+                                <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                            </div>
+                            <div class="car-price-box">
+                                <span class="price-amount">₦380,000</span>
+                                <span class="price-period">/ Package Per Day</span>
+                            </div>
+                            <ul class="perk-list">
+                                <li><i class="fa-solid fa-check"></i> Multiple Prado SUVs with suit-and-tie chauffeurs</li>
+                                <li><i class="fa-solid fa-check"></i> Ideal for weddings & VIP dignitary visits</li>
+                                <li><i class="fa-solid fa-check"></i> Unlimited refreshments & Wi-Fi onboard</li>
+                                <li><i class="fa-solid fa-check"></i> Priority route planning</li>
+                            </ul>
+                            <button class="btn btn-gold btn-full" onclick="openBookingModal('Prado Executive Convoy Package', '₦380,000')">
+                                Reserve Package
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. GALLERY PAGE ==================== -->
+        <section id="page-gallery" class="tab-page">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-tag">HIGH RESOLUTION FLEET</span>
+                    <h1 class="page-title">Toyota Prado Showcase</h1>
+                    <p class="section-subtext">Click on any image to view in full resolution lightbox. All images feature genuine Prado SUVs.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Front Metallic Profile')">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Front">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Dynamic Drive')">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Drive">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Side Exterior')">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Exterior">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Rear LED Angle')">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Rear">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Luxury Leather Interior')">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Interior">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=80', 'Toyota Prado Highway Travel')">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=600&q=80" alt="Toyota Prado Highway">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. CONTACT US PAGE ==================== -->
+        <section id="page-contact" class="tab-page">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <span class="section-tag">GET IN TOUCH WITH STANLEY</span>
+                    <h1 class="page-title">Contact & Location Base</h1>
+                    <p class="section-subtext">Located conveniently along Airport Road, Benin City, Edo State.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information & Map -->
+                    <div class="contact-info-box">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone-volume info-icon"></i>
+                            <div>
+                                <strong>Direct Phone / WhatsApp</strong>
+                                <p><a href="tel:08108802910">08108802910</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot info-icon"></i>
+                            <div>
+                                <strong>Physical Headquarters</strong>
+                                <p>Airport Road, Off GRA, Benin City, Edo State, Nigeria.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-clock info-icon"></i>
+                            <div>
+                                <strong>Operating Hours</strong>
+                                <p>24/7 Booking & Chauffeur Services Available</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-share-nodes info-icon"></i>
+                            <div>
+                                <strong>Official Social Handles</strong>
+                                <div class="social-links">
+                                    <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i> @RentIsEasyByStanley</a>
+                                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i> Rent Is Easy Stanley</a>
+                                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i> @RentIsEasy_Stanley</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map Frame -->
+                        <div class="map-wrapper">
+                            <iframe 
+                                title="Edo State Location Map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126868.52840742111!2d5.568341852936725!3d6.33502800318535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3623253b307%3A0xb35a0f8b86d99435!2sBenin%20City%2C%20Edo!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+                                width="100%" 
+                                height="220" 
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Direct Inquiry Form -->
+                    <div class="contact-form-box">
+                        <h3>Send Us a Quick Message</h3>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="senderName">Full Name</label>
+                                <input type="text" id="senderName" required placeholder="e.g. Chief Osaigbovo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderPhone">Phone Number</label>
+                                <input type="tel" id="senderPhone" required placeholder="e.g. 08108802910">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Service Needed</label>
+                                <select id="serviceType">
+                                    <option value="Airport Pickup">Airport Pickup</option>
+                                    <option value="Wedding Rental">Wedding Transportation</option>
+                                    <option value="Business Trip">Business / Corporate Trip</option>
+                                    <option value="Weekend Getaway">Weekend Getaway</option>
+                                    <option value="Photoshoot">Photoshoot / Video</option>
+                                    <option value="Full Chauffeur">Full Chauffeur Service</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rentalDate">Pickup Date in Edo State</label>
+                                <input type="date" id="rentalDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageText">Additional Details / Destinations</label>
+                                <textarea id="messageText" rows="4" placeholder="Mention flight time, location in Edo State, or special requests..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-full">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-text">
+                    <span class="brand-title">RENT IS EASY</span>
+                    <span class="brand-sub">BY STANLEY</span>
+                </div>
+                <p>Edo State's premier Toyota Prado rental agency. Providing well-dressed suit chauffeurs, free Wi-Fi, and cold refreshments for every journey.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" onclick="switchTab('home')">Home</a></li>
+                    <li><a href="#about" onclick="switchTab('about')">About Stanley</a></li>
+                    <li><a href="#fleet" onclick="switchTab('fleet')">Prado Rates (₦)</a></li>
+                    <li><a href="#gallery" onclick="switchTab('gallery')">Fleet Gallery</a></li>
+                    <li><a href="#contact" onclick="switchTab('contact')">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p><i class="fa-solid fa-phone icon-gold"></i> 08108802910</p>
+                <p><i class="fa-solid fa-location-dot icon-gold"></i> Airport Road, Benin City, Edo</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rent is Easy by Stanley. All Rights Reserved. Built with Senior Dev Standards.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightboxModal" class="modal" onclick="closeLightbox()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="lightboxImg" alt="Enlarged Prado View">
+        <div id="lightboxCaption" class="caption"></div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Reserve Prado SUV</h3>
+                <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Selected Model: <strong id="selectedCarName" class="text-gold">Prado TX</strong></p>
+                <p>Daily Rate: <strong id="selectedCarPrice" class="text-gold">₦150,000</strong></p>
+                <div class="perk-badge-box">
+                    <span><i class="fa-solid fa-user-tie"></i> Suit Chauffeur Included</span>
+                    <span><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                    <span><i class="fa-solid fa-wine-glass"></i> Refreshments</span>
+                </div>
+                <hr>
+                <p>To finalize your booking, call us directly or click below to chat on WhatsApp with Stanley:</p>
+                <a id="whatsappBookingBtn" href="#" target="_blank" class="btn btn-gold btn-full margin-top-md">
+                    <i class="fa-brands fa-whatsapp"></i> Proceed to WhatsApp Call/Chat
+                </a>
+                <a href="tel:08108802910" class="btn btn-outline btn-full margin-top-sm">
+                    <i class="fa-solid fa-phone"></i> Direct Call 08108802910
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
